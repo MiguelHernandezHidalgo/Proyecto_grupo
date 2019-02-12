@@ -9,6 +9,7 @@ import { FormBajaComponent } from './form-baja/form-baja.component';
 import { ListaComponent } from './lista/lista.component';
 import { PortfoliosService } from './portfolios.service';
 import { FooterComponentComponent } from './footer-component/footer-component.component';
+import { IndividualComponentComponent } from './individual-component/individual-component.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FooterComponentComponent } from './footer-component/footer-component.co
     FormAltaComponent,
     FormBajaComponent,
     ListaComponent,
-    FooterComponentComponent
+    FooterComponentComponent,
+    IndividualComponentComponent
   ],
   imports: [
     BrowserModule,
