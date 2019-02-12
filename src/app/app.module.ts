@@ -19,7 +19,7 @@ import { IndividualComponentComponent } from './individual-component/individual-
     FormBajaComponent,
     ListaComponent,
     FooterComponentComponent,
-    IndividualComponentComponent
+    IndividualComponentComponent,
     HeaderComponentComponent
   ],
   imports: [
