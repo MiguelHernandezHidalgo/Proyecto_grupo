@@ -8,13 +8,15 @@ import { FormAltaComponent } from './form-alta/form-alta.component';
 import { FormBajaComponent } from './form-baja/form-baja.component';
 import { ListaComponent } from './lista/lista.component';
 import { PortfoliosService } from './portfolios.service';
+import { FooterComponentComponent } from './footer-component/footer-component.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FormAltaComponent,
     FormBajaComponent,
-    ListaComponent
+    ListaComponent,
+    FooterComponentComponent
   ],
   imports: [
     BrowserModule,
