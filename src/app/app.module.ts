@@ -8,6 +8,7 @@ import { FormAltaComponent } from './form-alta/form-alta.component';
 import { FormBajaComponent } from './form-baja/form-baja.component';
 import { ListaComponent } from './lista/lista.component';
 import { PortfoliosService } from './portfolios.service';
+import { HeaderComponentComponent } from './header-component/header-component.component';
 import { FooterComponentComponent } from './footer-component/footer-component.component';
 import { IndividualComponentComponent } from './individual-component/individual-component.component';
 
@@ -19,6 +20,7 @@ import { IndividualComponentComponent } from './individual-component/individual-
     ListaComponent,
     FooterComponentComponent,
     IndividualComponentComponent
+    HeaderComponentComponent
   ],
   imports: [
     BrowserModule,
