@@ -1,0 +1,11 @@
+<h2>{{titulo}}</h2>
+{{etiqueta_nombre}}: <input type="text" [placeholder]="placeholder_nombre"
+[(ngModel)]="nombre_introducido"/><br/>
+{{etiqueta_descr}}: <textarea [(ngModel)]="descr_introducida"></textarea><br/>
+{{etiqueta_fich}}: <input type="text" [placeholder]="placeholder_fich"
+[(ngModel)]="fich_introducido"/><br/>
+<input type="button" (click)="limpiar()" value="Limpiar"/>
+<input type="button" (click)="darDeAlta()" value="Alta"/><br/>
+<p>{{nombre_introducido}}</p>
+<p>{{descr_introducida}}</p>
+<p>{{fich_introducido}}</p>
