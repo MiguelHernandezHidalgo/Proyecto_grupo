@@ -13,6 +13,15 @@ import { FooterComponentComponent } from './footer-component/footer-component.co
 import { IndividualComponentComponent } from './individual-component/individual-component.component';
 import { CategoriasComponent } from './categorias/categorias.component';
 
+import { RouterModule, Routes } from '@angular/router';
+
+const appRoutes: Routes=[
+  {path:'full-list', component:ListaComponent},
+  {path:'one-to-one', component:IndividualComponentComponent},
+  {path:'new', component:FormAltaComponent},
+  {path:'delete', component:FormBajaComponent}
+];
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +36,11 @@ import { CategoriasComponent } from './categorias/categorias.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    RouterModule.forRoot(
+      appRoutes,
+      { enableTracing: true } // <-- debugging purposes only
+    )
   ],
   providers: [PortfoliosService],
   bootstrap: [AppComponent]
