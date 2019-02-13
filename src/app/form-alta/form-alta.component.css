@@ -1,0 +1,64 @@
+h2 {
+    margin-left: 3.5em;
+}
+
+form {
+    width: 600px;
+
+}
+
+.boton1 {
+    background-color: red;
+    color:white;
+    width: 7em;
+    margin-left:120px;
+}
+
+.boton2 {
+    background-color: green;
+    color:white;
+    width: 7em;
+    margin-left:0px;
+    
+}
+
+.boton1:hover {
+    background-color: white;
+    color:red;
+    border:2px solid red;
+}
+
+.boton2:hover {
+    background-color: white;
+    color:green;
+    border:2px solid green;
+}
+
+.espacio_nombre {
+    width: 300px;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.espacio_descrip {
+    width: 300px;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.espacio_fich {
+    width: 300px;
+    border-radius: 5px 5px 5px 5px;
+}
+
+
+@media (max-width: 600px) { 
+
+    h2 {
+        margin-left: 30px;
+    }
+
+    form {
+        padding-left: 30px;
+    
+    }
+
+}
