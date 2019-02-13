@@ -6,6 +6,8 @@ import { Portfolio } from '../portfolio';
   templateUrl: './lista.component.html',
   styleUrls: ['./lista.component.css']
 })
+
+
 export class ListaComponent implements OnInit {
   arrayPortfolios: Array<Portfolio>;
 
