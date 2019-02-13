@@ -1,11 +1,31 @@
 <h2>{{titulo}}</h2>
-{{etiqueta_nombre}}: <input type="text" [placeholder]="placeholder_nombre"
-[(ngModel)]="nombre_introducido"/><br/>
-{{etiqueta_descr}}: <textarea [(ngModel)]="descr_introducida"></textarea><br/>
-{{etiqueta_fich}}: <input type="text" [placeholder]="placeholder_fich"
-[(ngModel)]="fich_introducido"/><br/>
-<input type="button" (click)="limpiar()" value="Limpiar"/>
-<input type="button" (click)="darDeAlta()" value="Alta"/><br/>
-<p>{{nombre_introducido}}</p>
-<p>{{descr_introducida}}</p>
-<p>{{fich_introducido}}</p>
+<form>
+    <div class="form-group row">
+        <div class="col-lg-2 col-sm-2"></div>
+        <label for="nombre" class="col-lg-2 col-sm-2 col-from-label"> {{etiqueta_nombre}}:</label> 
+        <div class="col-lg-6 col-sm-6"><input type="text" [placeholder]="placeholder_nombre"
+        [(ngModel)]="nombre_introducido" [ngModelOptions]="{standalone: true}" class="espacio_nombre"/></div>
+        <div class="col-lg-2 col-sm-2"></div>
+        <br/>
+    </div>
+
+    <div class="form-group row">
+        <div class="col-lg-2 col-sm-2"></div>
+        <label for="nombre" class="col-lg-2 col-sm-2 col-from-label">{{etiqueta_descr}}:</label> <div class="col-lg-6 col-sm-6"><textarea [(ngModel)]="descr_introducida" [ngModelOptions]="{standalone: true}" class="espacio_descrip"></textarea></div>
+        <div class="col-lg-2 col-sm-2"></div><br/>
+    </div>
+
+    <div class="form-group row">
+        <div class="col-lg-2 col-sm-2"></div>
+        <label for="nombre" class="col-lg-2 col-sm-2 col-from-label">{{etiqueta_fich}}:</label> <div class="col-lg-6 col-sm-6"><input type="text" [placeholder]="placeholder_fich"
+        [(ngModel)]="fich_introducido" [ngModelOptions]="{standalone: true}" class="espacio_fich"/></div><div class="col-lg-2 col-sm-2"></div><br/>
+    </div>
+    <div class="form-group row">
+        <input type="button" (click)="limpiar()" value="Limpiar" class="btn btn-default col-lg-1 col-sm-1 boton1"/>
+        <input type="button" (click)="darDeAlta()" value="Alta" class="btn btn-default col-lg-1 col-sm-2 boton2" /><br/>
+    </div>
+
+    <p>{{nombre_introducido}}</p>
+    <p>{{descr_introducida}}</p>
+    <p>{{fich_introducido}}</p>
+</form>
