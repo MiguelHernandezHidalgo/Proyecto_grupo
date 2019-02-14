@@ -1,7 +1,19 @@
 <h2>Lista portfolios</h2>
+<!--
 <ul>
   <li *ngFor="let portfolio of arrayPortfolios">
     El portfolio {{portfolio.getNombre()}}
     <input type="button" value="X" class="btn btn-default boton_lista">
   </li>
 </ul>
+-->
+<div class="lista">
+<tbody id="tbody_lista_cvs">
+  <tr *ngFor="let portfolio of arrayPortfolios">
+    <td>{{portfolio.getNombre()}}</td>
+    <td>{{portfolio.getDescripcion()}}</td>
+    <td>{{portfolio.getFichero()}}</td>
+    <td><input type="button" value="X" class="btn btn-default boton_lista"></td>
+  </tr>
+</tbody>
+</div>
