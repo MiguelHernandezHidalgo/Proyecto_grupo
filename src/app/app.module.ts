@@ -18,7 +18,9 @@ const appRoutes: Routes=[
   {path:'full-list', component:ListaComponent},
   {path:'one-to-one', component:IndividualComponentComponent},
   {path:'new', component:FormAltaComponent},
-  {path:'delete', component:FormBajaComponent}
+  {path:'delete', component:FormBajaComponent},
+  {path:'inicio', component:InicioComponent},
+  {path:'', redirectTo:'/inicio', pathMatch:'full'}
 ];
 
 @NgModule({
