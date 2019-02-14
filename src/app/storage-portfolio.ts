@@ -5,6 +5,7 @@ export class StoragePortfolio {
     private ls;
     constructor(){
         this.ls=window.localStorage;
+        this.arrPortfolio=new Array<Portfolio>();
     }
     //Accesores
 

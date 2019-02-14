@@ -5,7 +5,6 @@ import { StoragePortfolio } from './storage-portfolio';
 
 @Injectable()
 export class PortfoliosService {
-
   nuevoServicio:StoragePortfolio;
   constructor() {
     console.log("<<< CREANDO SERVICIO >>>");
@@ -21,7 +20,7 @@ export class PortfoliosService {
     let nuevoPortfolio: Portfolio;
     nuevoPortfolio=new Portfolio(nombre,desc,fich);
     //this.lista.push(nuevoPortfolio);
-    this.nuevoServicio.setArrPortfolio(nuevoPortfolio);
+
     this.nuevoServicio.arrTolocalSt();
     console.log("<<< ALTA PORTFOLIO: "+nuevoPortfolio.nombre+" >>>");
   }
