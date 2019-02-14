@@ -24,7 +24,6 @@ export class PortfoliosService {
     this.nuevoServicio.setArrPortfolio(nuevoPortfolio);
     this.nuevoServicio.arrTolocalSt();
     console.log("<<< ALTA PORTFOLIO: "+nuevoPortfolio.nombre+" >>>");
-    console.log()
   }
   /**baja: Public method that erases content of the Portfolio Array after searching by his name
    * @param  {string} nombre
