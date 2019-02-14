@@ -1,3 +1,31 @@
+
+
+h1 {
+    color:rgb(36, 59, 122);
+}
+
+h3 {
+    color:rgb(121, 140, 192);
+}
+
+
 .inicio {
-    min-height: 300px;
+    min-height: 400px;
+    margin:0px;
+
+}
+
+.container {
+    margin-bottom: 100px;
+}
+
+.imagen_inicio {
+    background-image: url(https://uploads-ssl.webflow.com/583347ca8f6c7ee058111b55/5aa6b3d4a165350001e89f6a_students-hero.png);
+    background-size: cover;
+    height: 300px;
+    width: 100%;
+    background-repeat: no-repeat;
+    margin-bottom: 40px;
+
+   
 }
