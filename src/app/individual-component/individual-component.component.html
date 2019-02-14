@@ -1,22 +1,23 @@
 <div id="div_de_1_en_1">
   <div class="form-group row">
-    <input id="btnAnterior" type="button" value="&laquo;" class="btn btn-default col-sm-1" />
+    <input id="btnAnterior" type="button" value="&laquo;" class="btn btn-default col-sm-1"  (click)="ant()"/>
     <div class="col-sm-6"> </div>
-    <input id="btnSiguiente" type="button" value="&raquo;" class="btn btn-default col-sm-1" />
+    <input id="btnSiguiente" type="button" value="&raquo;" class="btn btn-default col-sm-1" (click)="sig()" />
   </div>
   <div id="div_cv">
     <h1>Curriculum Vitae</h1>
     <h2>Datos personales</h2>
     <dl>
       <dt>Nombre:</dt>
-      <dd id="texto_nombre">Pues el nombre</dd>
+      <dd id="texto_nombre">{{ portfolioActual.nombre }}</dd>
       <dt>Email:</dt>
       <dd>email@dominio.com</dd>
     </dl>
     <div>
       <figure>
+        <!-- TODO: Aqui -->
         <!-- Ver más de https://uniwebsidad.com/libros/bootstrap-3/capitulo-4/imagenes -->
-        <img id="img_foto" src="https://www.conceptosydefiniciones.com/wp-content/uploads/2018/01/sermejorpersona2.jpg" alt="Foto de Nombre y Apell" class="img-circle">
+        <img id="img_foto" src="assets/fotos/{{portfolioActual.fichero}}.png" alt="Foto de Nombre y Apell" class="img-circle">
         <figcaption></figcaption>
       </figure>
       <h2>Descripción</h2>
@@ -29,6 +30,7 @@
           </li>
         </ul>
       </div>
+      <!-- TODO: Aqui -->
       <a id="enlace_cv" href="ejemplo_cv_1.html">Ver CV completo</a>
     </div>
   </div>

@@ -1,11 +1,18 @@
 <h2>Lista portfolios</h2>
 <div class="lista">
-<tbody id="tbody_lista_cvs">
-  <tr *ngFor="let portfolio of arrayPortfolios">
-    <td>{{portfolio.nombre}}</td>
-    <td>{{portfolio.descripcion}}</td>
-    <td>{{portfolio.fichero}}</td>
-    <td><input type="button" value="X" class="btn btn-default boton_lista"></td>
-  </tr>
-</tbody>
+<table class="table table-striped">
+  <thead>
+    <td>Nombre</td>
+    <td>Descripci&oacute;n</td>
+    <td>Fichero</td>
+  </thead>
+  <tbody id="tbody_lista_cvs">
+    <tr *ngFor="let portfolio of arrayPortfolios">
+      <td>{{portfolio.nombre}}</td>
+      <td>{{portfolio.descripcion}}</td>
+      <td>{{portfolio.fichero}}</td>
+      <td><input type="button" value="X" class="btn btn-default boton_lista"></td>
+    </tr>
+  </tbody>
+</table>
 </div>

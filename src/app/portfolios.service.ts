@@ -10,7 +10,7 @@ export class PortfoliosService {
   constructor() {
     console.log("<<< CREANDO SERVICIO >>>");
     this.nuevoServicio=new StoragePortfolio();
-    this.lista=new Array<Portfolio>();
+    this.lista=this.nuevoServicio.localStToArr();
   }
   /**alta: Public method that creates a new Portfolio element and includes it in the LocalStorage
    * @param  {string} nombre
@@ -22,24 +22,29 @@ export class PortfoliosService {
     let nuevoPortfolio: Portfolio;
     nuevoPortfolio=new Portfolio(nombre,desc,fich);
     this.lista.push(nuevoPortfolio);
-    this.nuevoServicio.setArrPortfolio(this.lista);
-    this.nuevoServicio.arrTolocalSt;
+    this.nuevoServicio.arrTolocalSt(this.lista);
     console.log("<<< ALTA PORTFOLIO: "+nuevoPortfolio.nombre+" >>>");
   }
   /**baja: Public method that erases content of the Portfolio Array after searching by his name
    * @param  {string} nombre
    * @returns void
    */
-  /*public baja(nombre: string):void{
+  public baja(nombre: string):void{
     console.log("<<< BAJA PORTFOLIO: "+nombre+" >>>");
-    for(var g=0;g<=this.lista.length;g++){
-      if(this.lista[g].nombre.toLowerCase()==nombre.toLowerCase()){
-        this.lista.splice(g,1);
-        console.log("<<< ELEMENTO ELIMINADO "+nombre+" >>>");
-        break;
+    for(var g=0;g < this.lista.length;g++){
+      console.log(g + ">>>>" + JSON.stringify( this.lista[g]));
+      if (typeof(this.lista[g]) != "undefined") {
+        console.log(g + "***" + JSON.stringify( this.lista[g]) + "+++ " + nombre);
+
+        if(this.lista[g].nombre.toLowerCase()==nombre.toLowerCase()){
+          this.lista.splice(g,1);
+          console.log("<<< ELEMENTO ELIMINADO "+nombre+" >>>");
+          break;
+        }
       }
     }
-  }*/
+    this.nuevoServicio.arrTolocalSt(this.lista);
+  }
   /**listar: Public method that lists all the content in Array<Portfolio>
    * @returns Array<Portfolio>
    */

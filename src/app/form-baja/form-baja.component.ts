@@ -9,7 +9,7 @@ import { Portfolio } from '../portfolio';
 })
 export class FormBajaComponent implements OnInit {
   titulo:string;
-  nombre_introducido: string;
+  nombreIntroducido: string;
 
   private arrayPortfolios: Array<Portfolio>;
 
@@ -20,12 +20,12 @@ export class FormBajaComponent implements OnInit {
 
   ngOnInit() {
     this.titulo="Baja de portfolio";
-    this.nombre_introducido="Gozer el gozeriano";
+    this.nombreIntroducido="";
 
     this.arrayPortfolios=this.servPortfolios.listar()
   }
   darDeBaja(){
-    this.servPortfolios.baja(this.nombre_introducido);
+    this.servPortfolios.baja(this.nombreIntroducido);
     console.log("<<< Se supone que ha dado baja >>>");
   }
   cambiarCampoForm(nombre:string):void{

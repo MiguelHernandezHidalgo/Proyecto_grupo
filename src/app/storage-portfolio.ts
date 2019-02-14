@@ -1,36 +1,26 @@
 import { Portfolio } from "./portfolio";
 
 export class StoragePortfolio {
-    private arrPortfolio:Array<Portfolio>;
     private ls;
     constructor(){
         this.ls=window.localStorage;
-        this.arrPortfolio=new Array<Portfolio>();
     }
     //Accesores
 
-    public get getArrPortfolio():Array<Portfolio>{
-        return this.arrPortfolio;
-    }
-
-    public set setArrPortfolio(arrPortfolio){
-        this.arrPortfolio=arrPortfolio;
-    }
-
-    arrTolocalSt(){
+    arrTolocalSt(arrPortfolio ){
         var obj:string;
-        obj=JSON.stringify(this.arrPortfolio);
+        obj=JSON.stringify(arrPortfolio);
         this.ls.setItem("portfolios", obj);
 
     }
 
     localStToArr():Array<Portfolio>{
         var arrayEnTexto=this.ls.getItem("portfolios");
-		this.arrPortfolio = JSON.parse(arrayEnTexto);
+		let arrPortfolio : Portfolio[]= JSON.parse(arrayEnTexto);
 			// Este array lo convertimos en un array de obj Portfolio
-			for (var i = 0; i < this.arrPortfolio.length; i++) {
-				this.arrPortfolio[i] = new Portfolio(this.arrPortfolio[i].nombre, this.arrPortfolio[i].descripcion,this.arrPortfolio[i].fichero);
+			for (var i = 0; i < arrPortfolio.length; i++) {
+				arrPortfolio[i] = new Portfolio(arrPortfolio[i].nombre, arrPortfolio[i].descripcion,arrPortfolio[i].fichero);
             }
-            return this.arrPortfolio;
+            return arrPortfolio;
     }
 }
