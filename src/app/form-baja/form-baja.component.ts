@@ -24,10 +24,12 @@ export class FormBajaComponent implements OnInit {
 
     this.arrayPortfolios=this.servPortfolios.listar()
   }
+  /*
   darDeBaja(){
     this.servPortfolios.baja(this.nombre_introducido);
     console.log("<<< Se supone que ha dado baja >>>");
   }
+  */
   cambiarCampoForm(nombre:string):void{
     alert(nombre);
   }

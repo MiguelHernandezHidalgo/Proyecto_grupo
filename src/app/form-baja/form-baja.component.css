@@ -1,5 +1,5 @@
 .baja_form {
-    margin-left: 100px;
+    margin-left: 150px;
     height: 300px;
 }
 
@@ -33,9 +33,6 @@ select {
 
 @media (max-width: 600px) { 
 
-    .baja_form {
-        padding-left: 30px;
-    }
 
     h2 {
         margin-left: 30px;
@@ -44,5 +41,12 @@ select {
     .baja_form {
         margin-left: 0px;
     }
+
+    .boton_eliminar {
+        margin-left: 290px;
+        margin-top: 10px;
+    
+    }
+    
 
 }

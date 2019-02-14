@@ -1,10 +1,12 @@
 
 h2 {
-    margin-left: 3.5em;
+    margin-left: 255px;
 }
 
 form {
     width: 600px;
+    margin-bottom: 50px;
+    margin-left: 150px;
 
 }
 
@@ -59,6 +61,7 @@ form {
 
     form {
         padding-left: 30px;
+        margin-left: 30px;
     
     }
 
