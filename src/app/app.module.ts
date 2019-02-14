@@ -11,9 +11,8 @@ import { PortfoliosService } from './portfolios.service';
 import { HeaderComponentComponent } from './header-component/header-component.component';
 import { FooterComponentComponent } from './footer-component/footer-component.component';
 import { IndividualComponentComponent } from './individual-component/individual-component.component';
-import { CategoriasComponent } from './categorias/categorias.component';
-
 import { RouterModule, Routes } from '@angular/router';
+import { InicioComponent } from './inicio/inicio.component';
 
 const appRoutes: Routes=[
   {path:'full-list', component:ListaComponent},
@@ -31,7 +30,8 @@ const appRoutes: Routes=[
     FooterComponentComponent,
     IndividualComponentComponent,
     HeaderComponentComponent,
-    CategoriasComponent
+    InicioComponent
+   
   ],
   imports: [
     BrowserModule,
