@@ -1,0 +1,8 @@
+#img_foto {
+
+    border-radius: 6%;
+    border:1px solid rgb(119, 119, 119);
+    -webkit-box-shadow: -2px 8px 25px -5px rgba(0,0,0,0.26);
+    -moz-box-shadow: -2px 8px 25px -5px rgba(0,0,0,0.26);
+    box-shadow: -2px 8px 25px -5px rgba(0,0,0,0.26);
+}

@@ -10,7 +10,7 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="/" id="ver_presentacion" data-que-mostrar="div_presentacion">Inicio</a></li>
+        <li><a href="/" id="ver_presentacion" data-que-mostrar="div_presentacion">Inicio</a></li>
         <li class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#">Ver portfolios <span class="caret"></span></a>
           <ul class="dropdown-menu">
@@ -20,7 +20,7 @@
             <li><a href="#" id="ver_por_categ">Por categorías</a></li>
           </ul>
         </li>
-        <li><a href="/new" id="ver_alta" data-que-mostrar="div_form">Nuevo</a></li>
+        <li><a href="/new" (click)="quitarActivo()" id="ver_alta" data-que-mostrar="div_form">Nuevo</a></li>
         <li><a href="/delete" id="ver_elimninar" data-que-mostrar="div_form">Eliminar</a></li>
       </ul>
       <form class="navbar-form navbar-left" action="/action_page.php">

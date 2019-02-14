@@ -16,11 +16,11 @@ export class FooterComponentComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.logotipo= ' LOGOTIPO ';
+    this.logotipo= ' LOGO ';
     this.inicio= 'Inicio';
     this.sobre='Sobre nosotros';
     this.soporte='Soporte técnico';
-    this.contacto='Contacte con nosotros';
+    this.contacto='Contáctenos';
     this.derechos='© 2019 Daniel, Miguel, Lucía, Bea y Guillermo';
   }
 

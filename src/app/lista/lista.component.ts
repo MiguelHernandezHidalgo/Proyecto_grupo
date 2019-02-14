@@ -20,3 +20,5 @@ export class ListaComponent implements OnInit {
     this.arrayPortfolios=this.servicioP.listar();
   }
 }
+
+
