@@ -6,9 +6,11 @@ import { StoragePortfolio } from './storage-portfolio';
 @Injectable()
 export class PortfoliosService {
   nuevoServicio:StoragePortfolio;
+  lista:Array<Portfolio>;
   constructor() {
     console.log("<<< CREANDO SERVICIO >>>");
     this.nuevoServicio=new StoragePortfolio();
+    this.lista=new Array<Portfolio>();
   }
   /**alta: Public method that creates a new Portfolio element and includes it in the LocalStorage
    * @param  {string} nombre
@@ -19,9 +21,9 @@ export class PortfoliosService {
   public alta(nombre: string, desc: string, fich: string):void{
     let nuevoPortfolio: Portfolio;
     nuevoPortfolio=new Portfolio(nombre,desc,fich);
-    //this.lista.push(nuevoPortfolio);
-
-    this.nuevoServicio.arrTolocalSt();
+    this.lista.push(nuevoPortfolio);
+    this.nuevoServicio.setArrPortfolio(this.lista);
+    this.nuevoServicio.arrTolocalSt;
     console.log("<<< ALTA PORTFOLIO: "+nuevoPortfolio.nombre+" >>>");
   }
   /**baja: Public method that erases content of the Portfolio Array after searching by his name
@@ -39,12 +41,11 @@ export class PortfoliosService {
     }
   }*/
   /**listar: Public method that lists all the content in Array<Portfolio>
-   * @returns Array
+   * @returns Array<Portfolio>
    */
   public listar(): Array<Portfolio>{
-    var arrayJSON:Array<Portfolio>;
-    arrayJSON=this.nuevoServicio.localStToArr();
-    console.log("<<< LISTA PORTFOLIOS: "+arrayJSON.toString()+" >>>");
-    return arrayJSON;
+    this.lista=this.nuevoServicio.localStToArr();
+    console.log("<<< LISTA PORTFOLIOS: "+this.lista.toString()+" >>>");
+    return this.lista;
   }
 }
